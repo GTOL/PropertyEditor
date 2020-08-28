@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="javafx.scene.layout.StackPane" xmlns:fx="http://javafx.com/fxml">
+	<TextArea fx:id="textArea" styleClass="mono-text-area" />
+</fx:root>

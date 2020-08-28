@@ -1,0 +1,5 @@
+/* Main css file for PropertyEditor */
+
+.mono-text-area {
+	-fx-font-family: 'monospace';
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="javafx.scene.layout.BorderPane" xmlns:fx="http://javafx.com/fxml">
+	<top>
+		<MenuBar fx:id="menuBar">
+			<Menu fx:id="fileMenu" text="%root.menubar.file">
+				<MenuItem fx:id="newMenuItem" text="%root.menubar.file.new" />
+				<MenuItem fx:id="openMenuItem" text="%root.menubar.file.open" />
+				<SeparatorMenuItem />
+				<MenuItem fx:id="exitMenuItem" text="%root.menubar.file.exit" />
+			</Menu>
+			<Menu fx:id="editMenu" text="%root.menubar.edit">
+			</Menu>
+			<Menu fx:id="helpMenu" text="%root.menubar.help">
+				<MenuItem fx:id="docMenuItem" text="%root.menubar.help.doc" />
+				<MenuItem fx:id="aboutMenuItem" text="%root.menubar.help.about" />
+			</Menu>
+		</MenuBar>
+	</top>
+	<bottom>
+		<VBox>
+			<Separator />
+			<HBox fx:id="statusBar" prefHeight="20">
+			</HBox>
+		</VBox>
+	</bottom>
+</fx:root>
