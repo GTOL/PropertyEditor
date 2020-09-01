@@ -16,31 +16,41 @@ import me.gtol.application.editor.propertyeditor.model.Model;
 import me.gtol.application.editor.propertyeditor.model.SingleFileProject;
 import me.gtol.application.editor.propertyeditor.util.FXUtils;
 
-public class SingleFileRawPane extends StackPane implements Initializable {
+public class SingleFileRawPane extends StackPane implements Initializable, Savable {
 	private final SingleFileProject project;
 
 	@FXML
 	TextArea textArea;
 
-	public SingleFileRawPane(PropertyEditor mainApp, Model model, SingleFileProject project) {
+	public SingleFileRawPane(PropertyEditor mainApp, Model model, SingleFileProject project) throws IOException {
 		if (project == null)
 			throw new NullPointerException();
 		this.project = project;
 
 		FXUtils.loadFXML(this, "/assets/fxml/SingleFileRawPane.fxml");
+		readFile();
 	}
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+	}
+
+	private void readFile() throws IOException {
 		// TODO handle deleted file
 		// TODO handle new file
+		// TODO handle file edit
 		try {
-			System.out.println(Paths.get(".").toAbsolutePath());
 			String fileContent = Files.readString(project.getFilePath(), StandardCharsets.ISO_8859_1);
 			textArea.setText(fileContent);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void save() throws IOException {
+		String text = textArea.getText();
+		Files.writeString(project.getFilePath(), text, StandardCharsets.ISO_8859_1);
 	}
 }

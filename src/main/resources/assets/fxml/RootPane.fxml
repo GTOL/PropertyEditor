@@ -14,7 +14,8 @@
 		<MenuBar fx:id="menuBar">
 			<Menu fx:id="fileMenu" text="%root.menubar.file">
 				<MenuItem fx:id="newMenuItem" text="%root.menubar.file.new" />
-				<MenuItem fx:id="openMenuItem" text="%root.menubar.file.open" />
+				<MenuItem fx:id="openMenuItem" text="%root.menubar.file.open" onAction="#openClicked" />
+				<MenuItem fx:id="saveMenuItem" text="%root.menubar.file.save" onAction="#saveClicked" accelerator="Ctrl+S" />
 				<SeparatorMenuItem />
 				<MenuItem fx:id="exitMenuItem" text="%root.menubar.file.exit" />
 			</Menu>
