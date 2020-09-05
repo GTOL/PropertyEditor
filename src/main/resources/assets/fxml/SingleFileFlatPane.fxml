@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="javafx.scene.layout.StackPane" xmlns:fx="http://javafx.com/fxml">
+	<SplitPane fx:id="splitPane" dividerPositions="0.3">
+		<ListView fx:id="listView" editable="true">
+			<placeholder>
+				<Label text="%sffPane.list.placeholder"/>
+			</placeholder>
+		</ListView>
+		<TextArea fx:id="textArea" styleClass="mono-text-area" />
+	</SplitPane>
+</fx:root>

@@ -59,7 +59,7 @@ public class ProjectTabPane extends TabPane {
 			if (project instanceof SingleFileProject) {
 				// TODO use multi-thread file reading
 				try {
-					this.setContent(new SingleFileRawPane(mainApp, model, (SingleFileProject) project));
+					this.setContent(new SingleFileFlatPane(mainApp, model, (SingleFileProject) project));
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
